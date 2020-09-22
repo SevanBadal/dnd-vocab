@@ -38,7 +38,7 @@ function App() {
         <h2>DnD 5E 词表卡</h2>
         <div>
       
-          <a href="https://github.com/">  <FontAwesomeIcon icon={faGithub} /></a>
+          <a href="https://github.com/SevanBadal/dnd-vocab">  <FontAwesomeIcon icon={faGithub} /></a>
         </div>
         <div className="Word-container">
           <input 
