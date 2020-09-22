@@ -22,6 +22,7 @@ function App() {
     const asyncLoadWords = async () => {
       const dnd_words = await d3.csv(data_csv);
       setWords(dnd_words);
+      console.log(dnd_words)
     }
     asyncLoadWords();    
   },[]);
