@@ -15,22 +15,33 @@ function App() {
   
   const handleQuery = event => {
     console.log(event.target.value)
-    setSearchTerm(event.target.value);
+    setSearchTerm(event.target.value.toLowerCase());
   };
 
   useEffect( () => {
     const asyncLoadWords = async () => {
       const dnd_words = await d3.csv(data_csv);
       setWords(dnd_words);
-      console.log(dnd_words)
+      // console.log(dnd_words)
     }
     asyncLoadWords();    
   },[]);
 
-  const results = useMemo(() => {
+  const handleChinese = () => {
+    return words.filter(wordObject => {
+      return wordObject.译本译词.toLowerCase().includes(searchTerm);
+    });
+  }
+
+  const handleEnglish = () => {
     return words.filter(wordObject => {
       return wordObject.原词.toLowerCase().includes(searchTerm);
     });
+  }
+
+  const results = useMemo(() => {
+    if(searchTerm.match(/[\u3400-\u9FBF]/)) return handleChinese();
+    return handleEnglish();
   }, [words, searchTerm]);
 
   return (
