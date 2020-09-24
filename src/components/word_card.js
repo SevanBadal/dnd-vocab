@@ -6,6 +6,8 @@ const style = {
         flexBasis: 0,
         background: 'white',
         margin: '4px',
+        paddingVertical: '8px',
+        paddingHorizontal: '16px'
     },
     text: {
         color: 'black'
