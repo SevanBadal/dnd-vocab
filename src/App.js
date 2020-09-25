@@ -22,7 +22,7 @@ function App() {
   };
 
   const clickWord = (e) => {
-    const index = e.target.getAttribute("index") - 2;
+    const index = e.target.getAttribute("index");
     setCurretWord(words[index])
     toggle();
   }
@@ -55,8 +55,8 @@ function App() {
   const displayWordCards = () => {
     return results.map((wordObject, index) => (
       <WordCard
-      index={wordObject[1]} 
-      key={wordObject[1]} 
+      index={wordObject.id} 
+      key={wordObject.id} 
       english={wordObject.原词} 
       chinese={wordObject.译本译词} 
       onClick={clickWord}
