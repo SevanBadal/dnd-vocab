@@ -18,7 +18,7 @@ Data is loaded from a CSV (`clean_data.csv`) as an array of objects located in `
 The objects have the following structure:
 ``` javascript
 const fooWord = {
-  1: '2',
+  id: '2',
   其他译词: '',
   原词: 'Anubis',
   子类: '埃及神祇',
