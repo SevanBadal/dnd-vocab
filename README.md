@@ -30,6 +30,8 @@ const fooWord = {
 ```
 
 ## Todo
+- [ ] port CSV data to MongoDB
+- [ ] express API design (user modal, word model, CRUD functionality, etc)
 - [ ] overall design rehaul
 - [ ] debounce on input field onChange callback
 
