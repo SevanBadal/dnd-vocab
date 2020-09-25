@@ -30,13 +30,13 @@ const fooWord = {
 ```
 
 ## Todo
-
-- [ ] filter Chinese -> English
-- [ ] load detail modal (display other attrs from word object) on click
 - [ ] overall design rehaul
 - [ ] debounce on input field onChange callback
+
 ### Done ✓
 - [x] filter English -> Chinese
+- [x] filter Chinese -> English
+- [x] load detail modal (display other attrs from word object) on click
 
 <!-- CONTRIBUTING -->
 ## Contributing
