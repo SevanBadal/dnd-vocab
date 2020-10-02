@@ -134,7 +134,13 @@ button {
   width: 50vw;
 }
 
+/**
+* We want to maintain 16px on small devices to prevent zoom-on-focus effects
+* on iphone and other Apple devices
+ */
 @media screen and (max-width: 800px) {
+  body { font-size: 16px; }
+  input, select { font-size: 100%; }
   .word-card {
     width: 80vw;
   }

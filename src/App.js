@@ -37,13 +37,13 @@ function App() {
 
   const handleChinese = () => {
     return words.filter(wordObject => {
-      return wordObject.译本译词.toLowerCase().includes(searchTerm);
+      return wordObject.译本译词.toLowerCase().includes(searchTerm.trim());
     });
   }
 
   const handleEnglish = () => {
     return words.filter(wordObject => {
-      return wordObject.原词.toLowerCase().includes(searchTerm);
+      return wordObject.原词.toLowerCase().includes(searchTerm.trim());
     });
   }
 
