@@ -5,6 +5,8 @@ import SearchInput from './components/search_input';
 import WordCard from './components/word_card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faInfo, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+
 import useModal from './components/useModal';
 import Modal from './components/Modal';
 
@@ -66,16 +68,21 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App-header">
-        <h2>DnD 5E 词表卡</h2>
+      <div className="App-nav">
+          <a href="#">  <FontAwesomeIcon icon={faInfoCircle} /></a>
+          <h1>DnD 5E 词表卡</h1>
           <a href="https://github.com/SevanBadal/dnd-vocab">  <FontAwesomeIcon icon={faGithub} /></a>
+      </div>
+      <div className="App-search">
+      <SearchInput class={"input"} value={searchTerm} handleQuery={handleQuery}/>
+      </div>
+      <div className="App-body">
         <div className="Word-container">
           <Modal
             currentWord={currentWord}
             isShowing={isShowing}
             hide={toggle}
           />
-          <SearchInput class={"input"} value={searchTerm} handleQuery={handleQuery}/>
           {displayWordCards()}
           </div>
       </div>
