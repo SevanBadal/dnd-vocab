@@ -4,7 +4,7 @@ const style = {
     container: {
         flexGrow: 1,
         flexBasis: 0,
-        background: 'white',
+        background: '#E5E9F0',
         margin: '4px',
         paddingVertical: '8px',
         paddingHorizontal: '16px',
